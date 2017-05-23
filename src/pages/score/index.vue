@@ -70,8 +70,8 @@ export default {
     }
   },
   created () {
-    this.getScoreTip()
     this.getScore()
+    this.getScoreTip()
   }
 }
 
