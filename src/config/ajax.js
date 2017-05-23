@@ -5,9 +5,9 @@ export default (type = 'GET', url = '', data = {}, async = true) => {
     let requestObj
     if (window.XMLHttpRequest) {
       requestObj = new XMLHttpRequest()
-    } else {
-      requestObj = new ActiveXObject('Microsoft.XMLHTTP')
-    }
+    }// else {
+      // requestObj = new ActiveXObject('Microsoft.XMLHTTP')
+    // }
 
     if (type === 'GET') {
       let dataStr = ''

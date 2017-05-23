@@ -28,7 +28,6 @@ export default {
       }
   }
 
-
   html{
       height: 100%;
       width: 100%;
@@ -36,10 +35,12 @@ export default {
   body{
       height: 100%;
       width: 100%;
-      background: url(assets/1-1.jpg) no-repeat;
-      background-size: 100% 100%;
+      // background: url(assets/1-1.jpg) no-repeat;
+      // background-size: 100% 100%;
   }
 
+  #app{ height:100%; }
+  
   .clear:after{
       content: '';
       display: block;

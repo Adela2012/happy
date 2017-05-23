@@ -40,7 +40,7 @@ const state = {
       'topic_answer_id': 69,
       'topic_id': 20,
       'answer_name': '答案dddd',
-      'is_strandard_answer': 0
+      'is_strandard_answer': 1
     }]
   }, {
     'topic_id': 21,
@@ -54,27 +54,28 @@ const state = {
     'active_end_time': '1482163200',
     'topic_answer': [{
       'topic_answer_id': 70,
-      'topic_id': 20,
+      'topic_id': 21,
       'answer_name': '答案A',
-      'is_strandard_answer': 0
+      'is_strandard_answer': 1
     }, {
       'topic_answer_id': 71,
-      'topic_id': 20,
+      'topic_id': 21,
       'answer_name': '答案B',
       'is_strandard_answer': 0
     }, {
       'topic_answer_id': 72,
-      'topic_id': 20,
+      'topic_id': 21,
       'answer_name': '答案C',
       'is_strandard_answer': 0
     }, {
       'topic_answer_id': 73,
-      'topic_id': 20,
+      'topic_id': 21,
       'answer_name': '答案D',
       'is_strandard_answer': 0
     }]
   }],
-  answerid: {}
+  answerid: {},
+  trueanswerid: {'1': 69, '2': 70}
 }
 
 export default new Vuex.Store({

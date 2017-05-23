@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 import './config/rem'
+// import './config/ajax'
 
 Vue.config.productionTip = false
 

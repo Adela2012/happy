@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="item">
     <Xheader :headertitle="itemNum" :isnum="true"></Xheader>
     <div class="item_back container_style">
       <div class="item_list_container" v-if="itemDetail.length >0 ">
@@ -13,7 +13,7 @@
       </div> 
     </div>
     <span class="next_item button_style" v-if="itemNum < itemDetail.length" @click="nextItem"></span>
-    <span class="submit_item button_style" v-else></span>
+    <span class="submit_item button_style" v-else @click="submitAnswer"></span>
   </div>
 </template>
 
@@ -42,17 +42,40 @@
         this.choosedId = id
       },
       nextItem: function () {
-        if (this.choosedNum !== null) {
+        if (this.choosedNum !== '') {
           this.choosedNum = null
+          this.$store.dispatch('addNum', this.choosedId)
+        } else {
+          alert('您还没有选择答案哦')
+        }
+      },
+      submitAnswer: function () {
+        if (this.choosedNum !== null) {
+          this.$store.dispatch('addNum', this.choosedId)
+          clearInterval(this.$store.state.timer)
+          this.$router.push('score')
         } else {
           alert('您还没有选择答案哦')
         }
       }
+    },
+    created () {
+      this.$store.dispatch('initializeData')
+      if (this.$store.state.itemDetail.length === 0) {
+        this.$store.dispatch('getData')
+      }
+      this.choosedNum = ''
     }
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
+  .item{
+    height: 100%;
+    width: 100%;
+    background: url(../../assets/1-1.jpg) no-repeat;
+    background-size: 100% 100%;
+  }
   .item_back{
     background-image: url(../../assets/2-1.png);
     background-size: 100% 100%;

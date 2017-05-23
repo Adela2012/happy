@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <Xheader :headertitle="level"></Xheader>
     <div class="home_logo container_style"></div>
     <router-link to="item" class="start button_style" ></router-link>
@@ -20,7 +20,13 @@
   }
 </script>
 
-<style lang="less">
+<style lang="less"  scoped>
+  .home{
+    height: 100%;
+    width: 100%;
+    background: url(../../assets/1-1.jpg) no-repeat;
+    background-size: 100% 100%;
+  }
   .home_logo{
     background-image: url(../../assets/1-2.png);
     background-size: 13.142rem 100%;

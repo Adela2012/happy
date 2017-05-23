@@ -7,7 +7,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: r => require.ensure([], () => r(require('../components/Hello')), 'hello')
+      component: r => require.ensure([], () => r(require('../pages/home')), 'home')
     },
     {
       path: '/home',
@@ -16,6 +16,10 @@ export default new Router({
     {
       path: '/item',
       component: r => require.ensure([], () => r(require('../pages/item')), 'item')
+    },
+    {
+      path: '/score',
+      component: r => require.ensure([], () => r(require('../pages/score')), 'score')
     }
   ]
 })
